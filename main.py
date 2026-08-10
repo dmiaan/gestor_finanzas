@@ -3,12 +3,12 @@
 # Haciendo una importación de las funciones del archivo database 
 from database import agregar_transaccion, calcular_balance, obtener_transacciones
 
-# Importando el modulo datetime para colocar fechas
+# Importando el módulo datetime para colocar fechas
 from datetime import date
 
-import csv # Con este modulo leemos, modificamos y recorremos las filas de datos de texto plano
+import csv # Módulo para la manipulación, lectura y escritura de archivos de texto plano en formato CSV.
 
-# Creando el menu de la interfaz
+# Creando el menú de la interfaz
 menu = {
     1: "Registrar usuario",
     2: "Registrar gasto",
@@ -18,7 +18,7 @@ menu = {
     6: "Salir"
 } 
 
-# Mostrando el menu y solicitar opciones al usuario
+# Mostrando el menú y solicitar opciones al usuario
 while True:
     for opcion, nombre_opcion in menu.items(): # Recorriendo los elementos del diccionario
         print(f"{opcion}: {nombre_opcion}")

@@ -1,0 +1,7 @@
+# Archivos temporales de Python
+__pycache__/
+.venv/
+venv/
+
+# Reportes generados localmente para no subir datos de prueba
+*.csv

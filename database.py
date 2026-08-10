@@ -4,7 +4,7 @@
 
 # Crear funciones dedicadas exclusivamente para poder interactuar con la base de datos
 
-import mysql.connector # importando el modulo para poder conectar la base de datos
+import mysql.connector # importando el módulo para poder conectar la base de datos
 
 # Definiendo la función que va a hacer la conexión con la base de datos y creación de la table de la base de datos
 def inicializar_db():
@@ -31,7 +31,7 @@ def inicializar_db():
     
 # ________________________________________________________________________________________________
 
-# Función para conectar la base de datos y no estar repitiendo codigo de conexión en cada función
+# Función para conectar la base de datos y no estar repitiendo código de conexión en cada función
 def conectar():
     conexion_data_base = {
         "host": "127.0.0.1",
