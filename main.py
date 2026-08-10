@@ -1,6 +1,6 @@
 # Interfaz de línea de comandos(CLI) 
 
-# Haciendo una importación de las funciones del archivo database 
+# Haciendo una importación de las funciones del archivo database. 
 from database import agregar_transaccion, calcular_balance, obtener_transacciones
 
 # Importando la librería datetime para colocar fechas
