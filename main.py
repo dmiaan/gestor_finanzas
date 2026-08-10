@@ -12,7 +12,7 @@ import csv # Librería para la manipulación, lectura y escritura de archivos de
 menu = {
     1: "Registrar usuario",
     2: "Registrar gasto",
-    3: "Ver balance Actual y Historial",
+    3: "Ver balance Actual y Historial",    
     4: "Filtrar por cuentas",
     5: "Exportar Reporte a CSV",
     6: "Salir"
