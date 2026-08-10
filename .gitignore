@@ -5,3 +5,4 @@ venv/
 
 # Reportes generados localmente para no subir datos de prueba
 *.csv
+
