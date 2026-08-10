@@ -2,7 +2,7 @@
 
 ✱ 𝐂𝐚𝐫𝐚𝐜𝐭𝐞𝐫𝐢́𝐬𝐭𝐢𝐜𝐚𝐬 𝐩𝐫𝐢𝐧𝐜𝐢𝐩𝐚𝐥𝐞𝐬:
 
-● Interfaz Interactiva: Menú en consola con validación de errores numéricos(try/except)
+● Interfaz Interactiva: Menú en consola con validación de errores numéricos(try/except).
 
 ● Registro CRUD: Permite registrar transacciones, consultar el historial, filtrar datos y eliminar registros específicos.
 
