@@ -3,10 +3,10 @@
 # Haciendo una importación de las funciones del archivo database 
 from database import agregar_transaccion, calcular_balance, obtener_transacciones
 
-# Importando el módulo datetime para colocar fechas
+# Importando la librería datetime para colocar fechas
 from datetime import date
 
-import csv # Módulo para la manipulación, lectura y escritura de archivos de texto plano en formato CSV.
+import csv # Librería para la manipulación, lectura y escritura de archivos de texto plano en formato CSV.
 
 # Creando el menú de la interfaz
 menu = {
