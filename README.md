@@ -40,3 +40,21 @@ database.py: Dedicado exclusivamente a la lógica de la base de datos, incluyend
 
 main.py: Controla la interfaz de usuario en consola, despliega el menú principal y rutea las opciones seleccionadas.
 
+✱ 𝐈𝐧𝐬𝐭𝐚𝐥𝐚𝐜𝐢𝐨́𝐧 𝐲 𝐂𝐨𝐧𝐟𝐢𝐠𝐮𝐫𝐚𝐜𝐢𝐨́𝐧:
+
+```bash
+   git clone [https://github.com/TU-USUARIO/gestor_finanzas.git](https://github.com/TU-USUARIO/gestor_finanzas.git)
+   cd gestor_finanzas
+```
+
+1. Configurar la Base de Datos:
+Asegúrate de tener el servicio de MySQL activo en tu entorno local (ej. a través de XAMPP).
+Crea una base de datos llamada gestor_finanzas. Al ejecutar el programa por primera vez, el sistema creará automáticamente las tablas necesarias.
+
+2. Instalar dependencias:
+Es necesario instalar el conector de MySQL para Python:
+pip install mysql-connector-python
+
+3. Ejecutar la aplicación:
+python main.py
+
