@@ -27,7 +27,7 @@
 
 mysql-connector-python: Conector para enlazar python con la base de datos MySQL.
 
-Librerías nativas:
+● Librerías nativas:
 
 csv: Módulo para la manipulación, lectura y escritura de archivos de texto plano en formato CSV.
 
