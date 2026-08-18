@@ -20,11 +20,10 @@ menu = {
 
 # Mostrando el menú y solicitar opciones al usuario
 while True:
-    for opcion, nombre_opcion in menu.items(): # Recorriendo los elementos del diccionario
+    for opcion, nombre_opcion in menu.items(): 
         print(f"{opcion}: {nombre_opcion}")
-    # Creamos un try and except para que el programa no se deje de ejecutar si el usuario introduce un caracter en vez de números    
     try:
-        elige_opcion = int(input("Elige una opcion:")) # Pidiendole al usuario que seleccione una opción
+        elige_opcion = int(input("Elige una opcion:")) 
     except ValueError:
         print("Entrada invalida, debes ingresar solamente números")
         continue

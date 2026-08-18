@@ -14,8 +14,8 @@ def inicializar_db():
         "password": "",
         "database": "gestor_finanzas"     
     }
-    conexion = mysql.connector.connect(**conexion_data_base)  # Abrir la conexión
-    mensajero_sql = conexion.cursor() # Enviar ordenes a la base de datos
+    conexion = mysql.connector.connect(**conexion_data_base)  
+    mensajero_sql = conexion.cursor() 
     consulta_sql = """CREATE TABLE IF NOT EXISTS transacciones(
         id_transaccion INT AUTO_INCREMENT PRIMARY KEY,
         tipo VARCHAR(25),
@@ -24,9 +24,9 @@ def inicializar_db():
         fecha DATE,
         descripcion VARCHAR(100))
         """
-    mensajero_sql.execute(consulta_sql) # Ejecutar el envio de la creación de la tabla
-    mensajero_sql.close() # Cierre de la ejecución de la tabla
-    conexion.close() # Cierre de la conexión con la base de datos
+    mensajero_sql.execute(consulta_sql)
+    mensajero_sql.close() 
+    conexion.close() 
     
     
 # ________________________________________________________________________________________________
@@ -39,7 +39,7 @@ def conectar():
         "password": "",
         "database": "gestor_finanzas"
         }
-    conexion = mysql.connector.connect(**conexion_data_base)  # Abrir la conexión
+    conexion = mysql.connector.connect(**conexion_data_base)  
     return conexion
 
 # _______________________________________________________________________________________________________
@@ -47,15 +47,15 @@ def conectar():
 # Función para agregar datos a la tabla
 def agregar_transaccion(tipo, monto, categoria, fecha, descripcion):
       conexion = conectar()
-      mensajero_sql = conexion.cursor() # Enviar ordenes a la base de datos
+      mensajero_sql = conexion.cursor() 
       consulta_sql = """INSERT INTO transacciones(tipo, monto, categoria, fecha, descripcion)
       VALUES(%s, %s, %s, %s, %s)
       """
       valores = (tipo, monto, categoria, fecha, descripcion)
       mensajero_sql.execute(consulta_sql, valores)
-      conexion.commit() # Guardamos los cambios de forma permanente
-      mensajero_sql.close() # Cierre del mensajero
-      conexion.close() # Cierre de la conexión con la base de datos
+      conexion.commit() 
+      mensajero_sql.close() 
+      conexion.close() 
     
 
 #___________________________________________________________________________________________________        
@@ -86,14 +86,14 @@ def obtener_transacciones(filtro_categoria=None):
 # Calcular el balance: Ingresos, gastos y retornar saldo neto
 
 def calcular_balance():
-    total_ingreso = 0 # Variable auxiliar para el total_ingresos
-    total_gasto = 0 # Variable auxiliar para el total_gastos
+    total_ingreso = 0  
+    total_gasto = 0  
     lista_transacciones = obtener_transacciones()
-    for id_transaccion, tipo, monto, categoria, fecha, descripcion in lista_transacciones: # Desempaquetando datos(again)
+    for id_transaccion, tipo, monto, categoria, fecha, descripcion in lista_transacciones: 
         if tipo == "Ingreso":
-            total_ingreso += monto # calculando el ingreso
+            total_ingreso += monto 
         elif tipo == "Gasto":
-            total_gasto += monto # calculando el gasto y lo colocamos con el signo "+" para que a la hora de obtener el saldo neto no afecte con la regla de los signos
+            total_gasto += monto 
     saldo_neto = total_ingreso - total_gasto 
     return total_ingreso, total_gasto, saldo_neto  
  
@@ -105,7 +105,7 @@ def eliminar_transaccion(id_transaccion):
     conexion = conectar()
     mensajero_sql = conexion.cursor()
     consulta_sql = """DELETE FROM transacciones  
-                      WHERE id_transaccion = %s""" # Consulta para eliminar datos
+                      WHERE id_transaccion = %s""" 
     parametro_seguridad = (id_transaccion,) 
     mensajero_sql.execute(consulta_sql, parametro_seguridad)
     conexion.commit() 
